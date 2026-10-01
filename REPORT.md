@@ -20,7 +20,7 @@ Total human time was roughly 30 minutes, though a meaningful portion of that was
 
 ## Issues encountered
 
-### tsx crashes on Node.js v26 (works on v22 LTS)
+### 1. tsx crashes on Node.js v26 (works on v22 LTS)
 Running the generated TypeScript examples with npx tsx on Node v26.2.0 crashes inside tsx itself, before any user code executes:
 
 ```text
@@ -30,3 +30,12 @@ SyntaxError: Unexpected token '{'
 ```
 The error is not in my test script or the SDK — it comes from tsx's own cli.mjs. Switching to Node v22.2.0 via nvm use 22 fixed it immediately. The compiled SDK also runs cleanly with plain node on the .js output in dist/, with no TypeScript runner required.
 Recommendation: Add a line to the generated ts/README.md stating which Node versions are tested (e.g., "Tested on Node 20 and 22 LTS") and suggest running the compiled dist/ output with plain node for quick tests, so users on the latest Node aren't blocked.
+
+### 2. Return shape not documented per entity (TypeError from guessing)
+After switching to Node 22 and getting the SDK to run, my first smoke test
+failed with:
+
+```text
+Found undefined results
+TypeError: search.results is not iterable
+    at main (test.ts:11:32)
