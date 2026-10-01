@@ -1,0 +1,97 @@
+# Entity: by_ingredient
+
+main: kit: entity: by_ingredient: {
+
+  alias: field: {}
+
+  fields: {
+    can_make: {
+      h: "Can Make"
+      n: "can_make"
+      r: false
+      t: "`$OBJECT`"
+    }
+    have: {
+      h: "Have"
+      n: "have"
+      r: false
+      t: "`$ARRAY`"
+    }
+    one_away: {
+      h: "One Away"
+      n: "one_away"
+      r: false
+      t: "`$OBJECT`"
+    }
+  }
+
+  name: "by_ingredient"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/by-ingredients"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "have"
+                or: "have"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "en"
+                k: "query"
+                n: "lang"
+                or: "lang"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/by-ingredients"
+          q: {
+            exist: [
+              "have"
+              "lang"
+              "limit"
+            ]
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "by-ingredients"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

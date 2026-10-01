@@ -1,0 +1,221 @@
+# Entity: recipe
+
+main: kit: entity: recipe: {
+
+  alias: field: {}
+
+  fields: {
+    abv: {
+      h: "Abv"
+      n: "abv"
+      r: false
+      sh: "Strength, % ABV"
+      t: "`$INTEGER`"
+    }
+    attribution: {
+      h: "Attribution"
+      n: "attribution"
+      r: false
+      t: "`$STRING`"
+    }
+    base: {
+      h: "Base"
+      n: "base"
+      r: false
+      t: "`$STRING`"
+    }
+    categories: {
+      h: "Categories"
+      n: "categories"
+      r: false
+      t: "`$ARRAY`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      t: "`$STRING`"
+    }
+    difficulty: {
+      h: "Difficulty"
+      n: "difficulty"
+      r: false
+      t: "`$INTEGER`"
+    }
+    garnish: {
+      h: "Garnish"
+      n: "garnish"
+      r: false
+      t: "`$STRING`"
+    }
+    glass: {
+      h: "Glass"
+      n: "glass"
+      r: false
+      t: "`$STRING`"
+    }
+    glass_key: {
+      h: "Glass Key"
+      n: "glass_key"
+      r: false
+      t: "`$STRING`"
+    }
+    ice: {
+      h: "Ice"
+      n: "ice"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    ingredients: {
+      h: "Ingredients"
+      n: "ingredients"
+      r: false
+      t: "`$ARRAY`"
+    }
+    method: {
+      h: "Method"
+      n: "method"
+      r: false
+      t: "`$STRING`"
+    }
+    method_key: {
+      h: "Method Key"
+      n: "method_key"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    name_en: {
+      h: "Name En"
+      n: "name_en"
+      r: false
+      t: "`$STRING`"
+    }
+    photo: {
+      fo: "uri"
+      h: "Photo"
+      n: "photo"
+      r: false
+      t: "`$STRING`"
+    }
+    prep_minutes: {
+      h: "Prep Minutes"
+      n: "prep_minutes"
+      r: false
+      t: "`$INTEGER`"
+    }
+    slug: {
+      h: "Slug"
+      n: "slug"
+      r: false
+      t: "`$STRING`"
+    }
+    steps: {
+      h: "Steps"
+      n: "steps"
+      r: false
+      t: "`$ARRAY`"
+    }
+    url: {
+      fo: "uri"
+      h: "Url"
+      n: "url"
+      r: false
+      sh: "The recipe page."
+      t: "`$STRING`"
+    }
+    variants: {
+      h: "Variants"
+      n: "variants"
+      r: false
+      t: "`$ARRAY`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "recipe"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/recipe/{slug}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "slug"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "en"
+                k: "query"
+                n: "lang"
+                or: "lang"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/recipe/{slug}"
+          q: {
+            exist: [
+              "id"
+              "lang"
+            ]
+          }
+          r: {
+            param: {
+              slug: "id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "recipe"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

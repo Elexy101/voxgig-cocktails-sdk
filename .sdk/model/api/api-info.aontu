@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://24cocktails.com/developers.html"
+      }
+      description: "Read-only access to the 24cocktails.com catalogue: 7,000+ cocktail recipes with exact measures, method, glass, garnish and a photo, in 36 languages. Free, no key. Quote recipes with a link to the url field. Limit 120 requests per minute per client."
+      servers: [
+        {
+          url: "https://24cocktails.com"
+        }
+      ]
+      summary: "Read-only access to the 24cocktails.com catalogue: 7,000+ cocktail recipes with exact measures, method, glass, garnish and a photo, in 36 languages."
+      termsOfService: "https://24cocktails.com/developers.html#terms"
+      title: "24cocktails Recipe API"
+      version: "1.0.0"
+      website: "https://24cocktails.com"
+    }
+  }
+}
+

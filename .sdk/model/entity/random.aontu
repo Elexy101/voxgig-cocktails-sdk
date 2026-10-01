@@ -1,0 +1,109 @@
+# Entity: random
+
+main: kit: entity: random: {
+
+  alias: field: {}
+
+  fields: {
+    amount: {
+      h: "Amount"
+      n: "amount"
+      r: false
+      sh: "As printed: 30 ml, 2 dashes, 1 wedge"
+      t: "`$STRING`"
+    }
+    key: {
+      h: "Key"
+      n: "key"
+      r: false
+      t: "`$STRING`"
+    }
+    ml: {
+      h: "Ml"
+      n: "ml"
+      r: false
+      t: "`$NUMBER`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    optional: {
+      h: "Optional"
+      n: "optional"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  name: "random"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/random"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "base"
+                or: "base"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "cat"
+                or: "cat"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "en"
+                k: "query"
+                n: "lang"
+                or: "lang"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/random"
+          q: {
+            exist: [
+              "base"
+              "cat"
+              "lang"
+            ]
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "random"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,6 @@
+# Flows
+
+@"./BasicByIngredientFlow.aontu"
+@"./BasicRandomFlow.aontu"
+@"./BasicRecipeFlow.aontu"
+@"./BasicSearchFlow.aontu"

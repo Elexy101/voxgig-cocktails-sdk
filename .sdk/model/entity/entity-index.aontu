@@ -1,0 +1,6 @@
+# Entity Models
+
+@"./by_ingredient.aontu"
+@"./random.aontu"
+@"./recipe.aontu"
+@"./search.aontu"

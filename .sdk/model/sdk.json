@@ -1,0 +1,1171 @@
+{
+  "def": "openapi.json",
+  "main": {
+    "def": {
+      "desc": ""
+    },
+    "kit": {
+      "author": {
+        "name": "",
+        "url": ""
+      },
+      "config": {
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ],
+        "headers": {
+          "content-type": "application/json"
+        },
+        "repr": "auto"
+      },
+      "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "github-pages": {
+            "active": false,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "github-pages",
+            "name": "github-pages",
+            "origname": "",
+            "output": {
+              "path": "docs"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          },
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
+      "entity": {
+        "by_ingredient": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "can_make": {
+              "a": true,
+              "h": "Can Make",
+              "n": "can_make",
+              "r": false,
+              "t": "`$OBJECT`"
+            },
+            "have": {
+              "a": true,
+              "h": "Have",
+              "n": "have",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "one_away": {
+              "a": true,
+              "h": "One Away",
+              "n": "one_away",
+              "r": false,
+              "t": "`$OBJECT`"
+            }
+          },
+          "name": "by_ingredient",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/v1/by-ingredients",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "have",
+                        "or": "have",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "en",
+                        "k": "query",
+                        "n": "lang",
+                        "or": "lang",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/v1/by-ingredients",
+                  "q": {
+                    "exist": [
+                      "have",
+                      "lang",
+                      "limit"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "v1"
+                    },
+                    {
+                      "lit": "by-ingredients"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "random": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "amount": {
+              "a": true,
+              "h": "Amount",
+              "n": "amount",
+              "r": false,
+              "sh": "As printed: 30 ml, 2 dashes, 1 wedge",
+              "t": "`$STRING`"
+            },
+            "key": {
+              "a": true,
+              "h": "Key",
+              "n": "key",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "ml": {
+              "a": true,
+              "h": "Ml",
+              "n": "ml",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "optional": {
+              "a": true,
+              "h": "Optional",
+              "n": "optional",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            }
+          },
+          "name": "random",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/v1/random",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "base",
+                        "or": "base",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "cat",
+                        "or": "cat",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "en",
+                        "k": "query",
+                        "n": "lang",
+                        "or": "lang",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/v1/random",
+                  "q": {
+                    "exist": [
+                      "base",
+                      "cat",
+                      "lang"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "v1"
+                    },
+                    {
+                      "lit": "random"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "recipe": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "abv": {
+              "a": true,
+              "h": "Abv",
+              "n": "abv",
+              "r": false,
+              "sh": "Strength, % ABV",
+              "t": "`$INTEGER`"
+            },
+            "attribution": {
+              "a": true,
+              "h": "Attribution",
+              "n": "attribution",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "base": {
+              "a": true,
+              "h": "Base",
+              "n": "base",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "categories": {
+              "a": true,
+              "h": "Categories",
+              "n": "categories",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "description": {
+              "a": true,
+              "h": "Description",
+              "n": "description",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "difficulty": {
+              "a": true,
+              "h": "Difficulty",
+              "n": "difficulty",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "garnish": {
+              "a": true,
+              "h": "Garnish",
+              "n": "garnish",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "glass": {
+              "a": true,
+              "h": "Glass",
+              "n": "glass",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "glass_key": {
+              "a": true,
+              "h": "Glass Key",
+              "n": "glass_key",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "ice": {
+              "a": true,
+              "h": "Ice",
+              "n": "ice",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "ingredients": {
+              "a": true,
+              "h": "Ingredients",
+              "n": "ingredients",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "method": {
+              "a": true,
+              "h": "Method",
+              "n": "method",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "method_key": {
+              "a": true,
+              "h": "Method Key",
+              "n": "method_key",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "name_en": {
+              "a": true,
+              "h": "Name En",
+              "n": "name_en",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "photo": {
+              "a": true,
+              "fo": "uri",
+              "h": "Photo",
+              "n": "photo",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "prep_minutes": {
+              "a": true,
+              "h": "Prep Minutes",
+              "n": "prep_minutes",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "slug": {
+              "a": true,
+              "h": "Slug",
+              "n": "slug",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "steps": {
+              "a": true,
+              "h": "Steps",
+              "n": "steps",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "url": {
+              "a": true,
+              "fo": "uri",
+              "h": "Url",
+              "n": "url",
+              "r": false,
+              "sh": "The recipe page.",
+              "t": "`$STRING`"
+            },
+            "variants": {
+              "a": true,
+              "h": "Variants",
+              "n": "variants",
+              "r": false,
+              "t": "`$ARRAY`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "recipe",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/v1/recipe/{slug}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "slug",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "en",
+                        "k": "query",
+                        "n": "lang",
+                        "or": "lang",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/v1/recipe/{slug}",
+                  "q": {
+                    "exist": [
+                      "id",
+                      "lang"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "slug": "id"
+                    }
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "v1"
+                    },
+                    {
+                      "lit": "recipe"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "search": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "abv": {
+              "a": true,
+              "h": "Abv",
+              "n": "abv",
+              "r": false,
+              "sh": "Strength, % ABV",
+              "t": "`$INTEGER`"
+            },
+            "base": {
+              "a": true,
+              "h": "Base",
+              "n": "base",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "categories": {
+              "a": true,
+              "h": "Categories",
+              "n": "categories",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "glass": {
+              "a": true,
+              "h": "Glass",
+              "n": "glass",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "ingredients": {
+              "a": true,
+              "h": "Ingredients",
+              "n": "ingredients",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "method": {
+              "a": true,
+              "h": "Method",
+              "n": "method",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "name_en": {
+              "a": true,
+              "h": "Name En",
+              "n": "name_en",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "photo": {
+              "a": true,
+              "fo": "uri",
+              "h": "Photo",
+              "n": "photo",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "prep_minutes": {
+              "a": true,
+              "h": "Prep Minutes",
+              "n": "prep_minutes",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "slug": {
+              "a": true,
+              "h": "Slug",
+              "n": "slug",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "url": {
+              "a": true,
+              "fo": "uri",
+              "h": "Url",
+              "n": "url",
+              "r": false,
+              "sh": "The recipe page.",
+              "t": "`$STRING`"
+            }
+          },
+          "name": "search",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/v1/search",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "base",
+                        "or": "base",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "cat",
+                        "or": "cat",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "glass",
+                        "or": "glass",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "en",
+                        "k": "query",
+                        "n": "lang",
+                        "or": "lang",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "method",
+                        "or": "method",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 0,
+                        "k": "query",
+                        "n": "offset",
+                        "or": "offset",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "q",
+                        "or": "q",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/v1/search",
+                  "q": {
+                    "exist": [
+                      "base",
+                      "cat",
+                      "glass",
+                      "lang",
+                      "limit",
+                      "method",
+                      "offset",
+                      "q"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "v1"
+                    },
+                    {
+                      "lit": "search"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.results`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        }
+      },
+      "feature": {
+        "test": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false
+            },
+            "optspec": {
+              "entity": "`$MAP`",
+              "net": "`$MAP`"
+            },
+            "strict": false
+          },
+          "description": "In-memory mock transport for testing without a live server",
+          "hook": {
+            "GetData": {
+              "active": true,
+              "await": false
+            },
+            "GetMatch": {
+              "active": true,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": true,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": true,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PrePoint": {
+              "active": true,
+              "await": false
+            },
+            "PreRequest": {
+              "active": true,
+              "await": false
+            },
+            "PreResponse": {
+              "active": true,
+              "await": false
+            },
+            "PreResult": {
+              "active": true,
+              "await": false
+            },
+            "PreSpec": {
+              "active": true,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": true,
+              "await": false
+            },
+            "SetMatch": {
+              "active": true,
+              "await": false
+            }
+          },
+          "name": "test",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Test transport",
+          "transport": "base",
+          "version": "0.0.1"
+        }
+      },
+      "flow": {
+        "BasicByIngredientFlow": {
+          "active": true,
+          "entity": "by_ingredient",
+          "key$": "BasicByIngredientFlow",
+          "kind": "basic",
+          "name": "BasicByIngredientFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "by_ingredient_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicRandomFlow": {
+          "active": true,
+          "entity": "random",
+          "key$": "BasicRandomFlow",
+          "kind": "basic",
+          "name": "BasicRandomFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "random_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicRecipeFlow": {
+          "active": true,
+          "entity": "recipe",
+          "key$": "BasicRecipeFlow",
+          "kind": "basic",
+          "name": "BasicRecipeFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "recipe_ref01",
+                "srcdatavar": "recipe_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "recipe01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-recipe_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicSearchFlow": {
+          "active": true,
+          "entity": "search",
+          "key$": "BasicSearchFlow",
+          "kind": "basic",
+          "name": "BasicSearchFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "search_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "info": {
+        "auth": false,
+        "contact": {
+          "url": "https://24cocktails.com/developers.html"
+        },
+        "description": "Read-only access to the 24cocktails.com catalogue: 7,000+ cocktail recipes with exact measures, method, glass, garnish and a photo, in 36 languages. Free, no key. Quote recipes with a link to the url field. Limit 120 requests per minute per client.",
+        "servers": [
+          {
+            "url": "https://24cocktails.com"
+          }
+        ],
+        "summary": "Read-only access to the 24cocktails.com catalogue: 7,000+ cocktail recipes with exact measures, method, glass, garnish and a photo, in 36 languages.",
+        "termsOfService": "https://24cocktails.com/developers.html#terms",
+        "title": "24cocktails Recipe API",
+        "version": "1.0.0",
+        "website": "https://24cocktails.com"
+      },
+      "option": {},
+      "optspec": {
+        "allow": {
+          "method": "GET,PUT,POST,PATCH,DELETE,OPTIONS",
+          "op": "create,update,load,list,remove,command,direct,graphql"
+        },
+        "apikey": "",
+        "auth": {
+          "basic": false,
+          "in": "",
+          "name": "",
+          "prefix": ""
+        },
+        "base": "http://localhost:8000",
+        "clean": {
+          "keys": "key,token,id"
+        },
+        "entity": {
+          "`$CHILD`": {
+            "`$OPEN`": true,
+            "active": false,
+            "alias": {}
+          }
+        },
+        "extend": "`$ANY`",
+        "headers": {
+          "`$CHILD`": "`$STRING`"
+        },
+        "prefix": "",
+        "secret": "",
+        "server": {
+          "`$CHILD`": ""
+        },
+        "suffix": "",
+        "system": {
+          "fetch": "`$ANY`"
+        },
+        "test": {
+          "active": false,
+          "entity": {
+            "`$OPEN`": true
+          }
+        },
+        "utility": {}
+      },
+      "phase": {
+        "build": {
+          "active": true
+        },
+        "top": {
+          "active": true
+        }
+      },
+      "repo": {
+        "host": "github.com",
+        "path": ""
+      },
+      "target": {
+        "ts": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {
+            "@types/node": {
+              "active": true,
+              "kind": "dev",
+              "version": "^25.6.0"
+            },
+            "typescript": {
+              "active": true,
+              "kind": "dev",
+              "version": "^5.9.3"
+            }
+          },
+          "ext": "ts",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "cocktails",
+            "package": "",
+            "path": ""
+          },
+          "name": "ts",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "npm",
+              "package": "",
+              "state": "pending",
+              "url": "https://registry.npmjs.org",
+              "vault": {
+                "alias": "npm",
+                "env": "",
+                "recipe": "npm"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [
+            "test/runner.ts",
+            "test/vendor/omni/compat.ts",
+            "src/feature/secrets/sekreto/Providers.ts",
+            "src/feature/secrets/sekreto/Sigv4.ts",
+            "src/feature/secrets/sekreto/provider/Registry.ts",
+            "src/feature/secrets/sekreto/provider/http.ts"
+          ],
+          "title": "TypeScript"
+        }
+      },
+      "test": {
+        "live": {
+          "app": false,
+          "base": "",
+          "strict": true
+        }
+      }
+    }
+  },
+  "name": "cocktails",
+  "origin": "voxgig-sdk"
+}

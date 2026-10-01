@@ -1,0 +1,196 @@
+# Entity: search
+
+main: kit: entity: search: {
+
+  alias: field: {}
+
+  fields: {
+    abv: {
+      h: "Abv"
+      n: "abv"
+      r: false
+      sh: "Strength, % ABV"
+      t: "`$INTEGER`"
+    }
+    base: {
+      h: "Base"
+      n: "base"
+      r: false
+      t: "`$STRING`"
+    }
+    categories: {
+      h: "Categories"
+      n: "categories"
+      r: false
+      t: "`$ARRAY`"
+    }
+    glass: {
+      h: "Glass"
+      n: "glass"
+      r: false
+      t: "`$STRING`"
+    }
+    ingredients: {
+      h: "Ingredients"
+      n: "ingredients"
+      r: false
+      t: "`$ARRAY`"
+    }
+    method: {
+      h: "Method"
+      n: "method"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    name_en: {
+      h: "Name En"
+      n: "name_en"
+      r: false
+      t: "`$STRING`"
+    }
+    photo: {
+      fo: "uri"
+      h: "Photo"
+      n: "photo"
+      r: false
+      t: "`$STRING`"
+    }
+    prep_minutes: {
+      h: "Prep Minutes"
+      n: "prep_minutes"
+      r: false
+      t: "`$INTEGER`"
+    }
+    slug: {
+      h: "Slug"
+      n: "slug"
+      r: false
+      t: "`$STRING`"
+    }
+    url: {
+      fo: "uri"
+      h: "Url"
+      n: "url"
+      r: false
+      sh: "The recipe page."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "search"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/search"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "base"
+                or: "base"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "cat"
+                or: "cat"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "glass"
+                or: "glass"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "en"
+                k: "query"
+                n: "lang"
+                or: "lang"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "method"
+                or: "method"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 0
+                k: "query"
+                n: "offset"
+                or: "offset"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "q"
+                or: "q"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/search"
+          q: {
+            exist: [
+              "base"
+              "cat"
+              "glass"
+              "lang"
+              "limit"
+              "method"
+              "offset"
+              "q"
+            ]
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "search"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.results`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

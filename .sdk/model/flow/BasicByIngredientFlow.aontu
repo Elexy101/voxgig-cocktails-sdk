@@ -1,0 +1,22 @@
+# BasicByIngredientFlow
+
+main: kit: flow: BasicByIngredientFlow:
+{
+  entity: "by_ingredient",
+  kind: "basic",
+  name: "BasicByIngredientFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "by_ingredient_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicByIngredientFlow"
+}
